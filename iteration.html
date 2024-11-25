@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Práctica JavaScript - Xavier A. Olivares</title>
+    </head>
+    <body>
+        <p id="demo">Smile!</p>
+        <img id="faceImg" src="https://openclipart.org/image/300px/svg_to_png/245844/1459972540.png" alt="Smiley Clem Depit" title="Smiley Clem Depit by  Justin Ternet ( https://openclipart.org/user-detail/Justin Ternet )">
+        <p> <button onclick="stopFace()">Stop Toggling</button> </p>
+        
+        <script type="text/JavaScript">
+            function changeFace()
+            {
+                
+                if (document.getElementById("demo").innerHTML == "Smile!")
+                {
+                    document.getElementById("demo").innerHTML = "Frown!";
+                    document.getElementById('faceImg').src="https://openclipart.org/image/300px/svg_to_png/245849/1459973475.png";
+                    document.getElementById('faceImg').alt="Smiley Clem Depit";
+                    document.getElementById('faceImg').title="Smiley Clem Depit by  Justin Ternet ( https://openclipart.org/user-detail/Justin Ternet )";
+                }
+                
+                else
+                {
+                    document.getElementById("demo").innerHTML = "Smile!";
+                    document.getElementById('faceImg').src="https://openclipart.org/image/300px/svg_to_png/245844/1459972540.png";
+                }
+            }
+
+            facetime = setInterval(changeFace, 1000);
+            function stopFace() {
+                clearInterval(facetime);
+            }
+        </script>
+    </body>
+</html> 
+
